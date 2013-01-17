@@ -22,8 +22,8 @@ NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView = 1.0/3.0;
 #define CALLOUT_HEIGHT 70 // ...and allow only for this exact height.
 #define CALLOUT_DEFAULT_WIDTH 153 // default "I give up" width when we are asked to present in a space less than our min width
 #define TITLE_MARGIN 17 // the title view's normal horizontal margin from the edges of our callout view
-#define TITLE_TOP 11 // the top of the title view when no subtitle is present
-#define TITLE_SUB_TOP 3 // the top of the title view when a subtitle IS present
+#define TITLE_TOP 13 // the top of the title view when no subtitle is present
+#define TITLE_SUB_TOP 5 // the top of the title view when a subtitle IS present
 #define TITLE_HEIGHT 22 // title height, fixed
 #define SUBTITLE_TOP 25 // the top of the subtitle, when present
 #define SUBTITLE_HEIGHT 16 // subtitle height, fixed
@@ -70,7 +70,7 @@ NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView = 1.0/3.0;
             titleLabel.$height = TITLE_HEIGHT;
             titleLabel.opaque = NO;
             titleLabel.backgroundColor = [UIColor clearColor];
-            titleLabel.font = [UIFont boldSystemFontOfSize:17];
+            titleLabel.font = [UIFont fontWithName: @"Aller-Bold" size: 17];
             titleLabel.textColor = [UIColor whiteColor];
             titleLabel.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];
             titleLabel.shadowOffset = CGSizeMake(0, -1);
@@ -90,7 +90,7 @@ NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView = 1.0/3.0;
             subtitleLabel.$height = SUBTITLE_HEIGHT;
             subtitleLabel.opaque = NO;
             subtitleLabel.backgroundColor = [UIColor clearColor];
-            subtitleLabel.font = [UIFont systemFontOfSize:12];
+            subtitleLabel.font = [UIFont fontWithName: @"Aller-Bold" size: 12];
             subtitleLabel.textColor = [UIColor whiteColor];
             subtitleLabel.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];
             subtitleLabel.shadowOffset = CGSizeMake(0, -1);
@@ -526,7 +526,7 @@ NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView = 1.0/3.0;
     //// CoreGroup ////
     {
         CGContextSaveGState(context);
-        CGContextSetAlpha(context, 0.83);
+        CGContextSetAlpha(context, 1.0);
         CGContextBeginTransparencyLayer(context, NULL);
         
         // Background Drawing
@@ -639,7 +639,7 @@ NSTimeInterval kSMCalloutViewRepositionDelayForUIScrollView = 1.0/3.0;
         //// GlossGroup ////
         {
             CGContextSaveGState(context);
-            CGContextSetAlpha(context, 0.45);
+            CGContextSetAlpha(context, 0.0);
             CGContextBeginTransparencyLayer(context, NULL);
             
             CGFloat glossRadius = radius + 0.5;
